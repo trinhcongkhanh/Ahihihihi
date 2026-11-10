@@ -1,0 +1,7 @@
+# Thêm để chạy được trên Hugo mới (v0.123+ đã xóa getJSON).
+# Bỏ qua shortcode cũ layouts/shortcodes/ghcontributors.html (dùng getJSON),
+# thay bằng bản mới ở layouts/_shortcodes/ghcontributors.html.
+[[mounts]]
+  source = "layouts"
+  target = "layouts"
+  files = ["! shortcodes/ghcontributors.html"]

@@ -1,57 +1,33 @@
 ---
 title: "Week 2 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Topic:** AWS Firewall Manager
+* **Focus:** Centralized firewall policy management, rule enforcement, and common limitations
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Day 1 | - **Main Task:** Firewall Manager Basics <br> - **Activities:** Learned what AWS Firewall Manager is and why it is used in multi-account environments <br> - **Result:** Understood the main purpose of centralized firewall management | 21/09/2026 | 21/09/2026 | [AWS Firewall Manager Console](https://console.aws.amazon.com/wafv2/fms) <br> [AWS Firewall Manager Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html) |
+| Day 2 | - **Main Task:** Policies & Rules <br> - **Activities:** Studied how Firewall Manager policies apply security rules to AWS resources and accounts <br> - **Result:** Understood the difference between central policies and actual firewall rules | 24/09/2026 | 24/09/2026 | [AWS Firewall Manager Console](https://console.aws.amazon.com/wafv2/fms) <br> [AWS Firewall Manager Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html) |
+| Day 3 | - **Main Task:** Limitations & Risks <br> - **Activities:** Reviewed common problems such as policy conflicts, wrong configurations, and automation issues <br> - **Result:** Understood that Firewall Manager can enforce policies but cannot automatically fix bad security decisions | 27/09/2026 | 27/09/2026 | [AWS Firewall Manager Console](https://console.aws.amazon.com/wafv2/fms) <br> [AWS Firewall Manager Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html) |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **AWS Firewall Manager:** Centralizes firewall policy deployment and visibility across multi-account AWS Organizations
+* **Policy vs. Rule Separation:** Distinguishes between central governance policies (which accounts/resources are covered) and underlying firewall rules
+* **Operational Risks:** Identifies how misconfigured central policies or overlapping rules can impact multiple accounts simultaneously
 
-* Successfully created and configured an AWS Free Tier account.
+AWS Firewall Manager is not a standalone firewall—it is a central management layer that pushes and enforces security policies across accounts and resources. While this automation keeps new resources compliant automatically, it also amplifies the blast radius of a bad configuration: a poorly written central policy can disrupt traffic across many accounts at once.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+Key takeaways:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Central Orchestrator:** Firewall Manager enforces rules consistently across accounts, but administrators still design the actual security logic.
+- **Policy vs. Protection:** Automation guarantees that rules are applied, not that the rules themselves are well-designed.
+- **Blast-Radius Awareness:** Central policies must be tested carefully to avoid rule conflicts and unintended blocks across the organization.

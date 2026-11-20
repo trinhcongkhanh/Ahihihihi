@@ -1,58 +1,33 @@
 ---
 title: "Worklog Tuần 12"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* **Chủ đề:** AWS Well-Architected Framework và Dự án Thực tập cuối khóa
+* **Mục tiêu chính:** Vận hành xuất sắc, Bảo mật, Tin cậy, Hiệu năng, và Tối ưu chi phí (5 Trụ cột)
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | - **Kế hoạch:** Ngày 1 <br> - **Tác vụ chính:** Well-Architected Review <br> - **Hoạt động chi tiết:** Thực hiện quy trình WAR lên kiến trúc dự án cuối khóa <br> - **Kết quả:** Phát hiện 3 rủi ro bảo mật và vận hành (High-risk) | 24/11/2026 | 24/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
+| Thứ Ba | - **Kế hoạch:** Ngày 2 <br> - **Tác vụ chính:** Khắc phục Lỗi Kiến trúc <br> - **Hoạt động chi tiết:** Sửa các lỗi từ kết quả WAR (Bật mã hóa KMS, chuyển sang Multi-AZ) <br> - **Kết quả:** Kiến trúc được nâng cấp đạt chuẩn | 26/11/2026 | 26/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
+| Thứ Tư | - **Kế hoạch:** Ngày 3 <br> - **Tác vụ chính:** Tối ưu hóa Chi phí <br> - **Hoạt động chi tiết:** Giảm kích thước EC2 (Right-sizing) và cấu hình Savings Plans <br> - **Kết quả:** Giảm 25% chi phí dự kiến hàng tháng | 29/11/2026 | 29/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **AWS Well-Architected Tool:** Đánh giá kiến trúc theo các tiêu chuẩn (Best Practices) của AWS
+* **AWS Cost Explorer:** Right-sizing, Tiết kiệm qua Savings Plans, Reserved Instances
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Trong Tuần 12, tôi đã tổng hợp toàn bộ kiến thức tích lũy trong kỳ thực tập bằng cách thực hiện đánh giá AWS Well-Architected Review và tối ưu hóa dự án đám mây cuối khóa.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Các điểm chính đã học:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Đánh giá kiến trúc đám mây dựa trên các trụ cột của AWS Well-Architected Framework
+- Khắc phục các rủi ro bảo mật và độ tin cậy cao bằng mã hóa KMS và mô hình Multi-AZ
+- Phân tích chi phí và tối ưu hóa ngân sách đám mây qua EC2 right-sizing và AWS Savings Plans
+- Hoàn thiện và bàn giao kiến trúc đám mây sẵn sàng cho môi trường thực tế (production-ready)

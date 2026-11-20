@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* **Chủ đề:** Amazon CloudWatch, AWS Auto Scaling, AWS CloudFormation & AWS Config
+* **Mục tiêu chính:** Học cách giám sát tài nguyên, tự động co giãn (scale) chúng khi lưu lượng truy cập thay đổi, triển khai chúng bằng code, và theo dõi cấu hình của chúng
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Ngày 1 | - **Kế hoạch:** Giám sát <br> - **Tác vụ chính:** Giới thiệu về CloudWatch <br> - **Hoạt động chi tiết:** Tìm hiểu về metrics, logs, alarms và dashboards. Tạo một cảnh báo (alarm) gửi email cho tôi khi mức CPU của máy chủ EC2 vượt quá 70% | 05/11/2026 | 05/11/2026 | [Tài liệu hướng dẫn Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) <br> [Tài liệu hướng dẫn AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) |
+| Ngày 2 | - **Kế hoạch:** Co giãn (Scaling) <br> - **Tác vụ chính:** Giới thiệu về Auto Scaling <br> - **Hoạt động chi tiết:** Tạo một launch template và một Auto Scaling group với số lượng máy chủ tối thiểu (minimum), mong muốn (desired) và tối đa (maximum). Thêm một chính sách (policy) để giữ mức CPU trung bình quanh ngưỡng 50% | 06/11/2026 | 06/11/2026 | [Tài liệu hướng dẫn Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) <br> [Tài liệu hướng dẫn AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) |
+| Ngày 3 | - **Kế hoạch:** Kiểm thử <br> - **Tác vụ chính:** Quan sát Auto Scaling hoạt động <br> - **Hoạt động chi tiết:** Tạo tải giả lập lên một máy chủ để đẩy CPU tăng cao và quan sát các máy chủ mới tự động được thêm vào. Chủ đích dừng một máy chủ và thấy Auto Scaling tự động thay thế nó | 07/11/2026 | 07/11/2026 | [Tài liệu hướng dẫn Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) <br> [Tài liệu hướng dẫn AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) |
+| Ngày 4 | - **Kế hoạch:** Triển khai <br> - **Tác vụ chính:** Dùng CloudFormation cho thiết lập <br> - **Hoạt động chi tiết:** Viết một CloudFormation template cho Auto Scaling group và CloudWatch alarm, nhờ đó toàn bộ thiết lập có thể được tạo lại chỉ với một stack | 09/11/2026 | 09/11/2026 | [Tài liệu hướng dẫn Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) <br> [Tài liệu hướng dẫn AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) |
+| Ngày 5 | - **Kế hoạch:** Tuân thủ (Compliance) <br> - **Tác vụ chính:** Giới thiệu về AWS Config <br> - **Hoạt động chi tiết:** Bật AWS Config và thêm một vài quy tắc quản lý sẵn (managed rules), chẳng hạn như kiểm tra các S3 buckets không bị công khai và cổng SSH không mở cho tất cả mọi người. Xem xét những tài nguyên nào tuân thủ (compliant) và những tài nguyên nào không tuân thủ | 10/11/2026 | 10/11/2026 | [Tài liệu hướng dẫn Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) <br> [Tài liệu hướng dẫn AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Amazon CloudWatch:** Thu thập metrics và logs từ tài nguyên, thiết lập dashboards và cấu hình cảnh báo (alarms) khi vượt ngưỡng
+* **AWS Auto Scaling:** Duy trì số lượng và sức khỏe dàn máy chủ (min/desired/max) qua Launch Template và chính sách Target Tracking
+* **AWS Config:** Ghi lại lịch sử thay đổi cấu hình và đối chiếu tính tuân thủ liên tục theo bộ quy tắc (như kiểm tra S3 public hay SSH mở rộng)
+* **Vận hành kết hợp:** Đóng gói cả CloudWatch và Auto Scaling vào CloudFormation template để đồng bộ hóa việc xây dựng, giám sát và tự phục hồi
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Tuần này chuyển trọng tâm của tôi từ việc dựng hạ tầng sang việc duy trì hệ thống luôn khỏe mạnh và đúng chuẩn sau khi vận hành. Bài thử nghiệm đẩy tải CPU cho thấy rõ lý do **CloudWatch** và **Auto Scaling** luôn đi đôi với nhau: một dịch vụ phát hiện bất thường, dịch vụ kia tự động thêm mới hoặc thay thế máy chủ hỏng mà không cần con người can thiệp. Trong khi đó, **AWS Config** đóng vai trò như một bảng kiểm tra (checklist) chạy liên tục—nó không trực tiếp chặn thao tác sai mà ghi nhận lịch sử cấu hình và chỉ điểm những tài nguyên đang vi phạm quy tắc để kịp thời khắc phục.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Điểm cốt lõi rút ra:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- **Tự động phát hiện & Phản ứng:** Kết hợp CloudWatch Alarms và Auto Scaling Target Tracking giúp hệ thống tự co giãn theo tải thực tế và tự thay thế instance lỗi.
+- **Chuẩn hóa cụm vận hành bằng IaC:** Triển khai cả nhóm Auto Scaling và cảnh báo CloudWatch qua một CloudFormation stack giúp dễ dàng tái tạo hoặc dọn dẹp toàn bộ hệ thống.
+- **Kiểm toán cấu hình liên tục:** AWS Config giúp theo dõi biến động cấu hình theo thời gian và phát hiện ngay các thiết lập lệch chuẩn bảo mật.

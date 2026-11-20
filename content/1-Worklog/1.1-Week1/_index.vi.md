@@ -5,55 +5,29 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* **Chủ đề:** AWS Fundamentals & IAM
+* **Mục tiêu chính:** Hiểu các khái niệm cơ bản về AWS và cách quyền truy cập được quản lý bằng IAM
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Ngày 1 | - **Kế hoạch:** AWS Basics <br> - **Tác vụ chính:** AWS Fundamentals <br> - **Hoạt động chi tiết:** Tìm hiểu về AWS Management Console, Regions, Availability Zones và các dịch vụ AWS phổ biến | 15/09/2026 | 15/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Ngày 2 | - **Kế hoạch:** Quản lý người dùng <br> - **Tác vụ chính:** IAM Users & Groups <br> - **Hoạt động chi tiết:** Tìm hiểu cách tạo IAM Users, User Groups và phân quyền | 17/09/2026 | 17/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Ngày 3 | - **Kế hoạch:** Quản lý truy cập <br> - **Tác vụ chính:** IAM Roles & Policies <br> - **Hoạt động chi tiết:** Tìm hiểu về IAM Roles, Policies và Nguyên tắc đặc quyền tối thiểu | 20/09/2026 | 20/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Hạ tầng toàn cầu AWS:** Cách AWS tổ chức dịch vụ qua các Regions và Availability Zones để đảm bảo tính sẵn sàng cao và cô lập sự cố
+* **Định danh & Chính sách IAM:** Quản lý quyền truy cập thông qua IAM Users, User Groups, IAM Roles tạm thời và các chính sách JSON
+* **Bảo mật tài khoản nền tảng:** Bảo vệ tài khoản Root, bắt buộc xác thực đa yếu tố (MFA) và áp dụng nguyên tắc đặc quyền tối thiểu (Least Privilege)
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Tuần đầu tiên giúp tôi nắm rõ cách hạ tầng toàn cầu của AWS được tổ chức và lý do quản lý định danh luôn là lớp phòng thủ đầu tiên trên đám mây. Thay vì dùng chung tài khoản gốc hoặc cấp quyền tràn lan, AWS IAM tách biệt rõ người dùng, nhóm người dùng và các vai trò (Roles) tạm thời cho dịch vụ để mỗi đối tượng chỉ nhận đúng những quyền hạn cần thiết.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Điểm cốt lõi rút ra:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- **Tổ chức hạ tầng:** Regions và Availability Zones giúp cô lập rủi ro phần cứng và đặt ứng dụng gần người dùng hơn.
+- **Phân quyền theo nhóm & vai trò:** Quản lý quyền qua User Groups và dùng IAM Roles cho dịch vụ an toàn, dễ bảo trì hơn nhiều so với gắn quyền lẻ cho từng cá nhân.
+- **Bảo vệ Root & Đặc quyền tối thiểu:** Tài khoản Root cần được khóa chặt bằng MFA và không dùng cho công việc hàng ngày; mọi tác vụ đều phải tuân theo nguyên tắc Least Privilege.

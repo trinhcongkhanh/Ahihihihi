@@ -1,57 +1,36 @@
 ---
 title: "Week 6 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Topic:** Amazon EC2, Amazon Lightsail & AWS Lambda
+* **Main Objective:** Get a basic understanding of the three main ways to run code on AWS: virtual servers with EC2, simple servers with Lightsail, and serverless functions with Lambda, and know when to pick each one
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Day 1 | - **Plan:** EC2 Basics <br> - **Main Task:** Introduction to Amazon EC2 <br> - **Detailed Activities:** Learned the main parts of an EC2 instance: AMI, instance type, key pair, security group and EBS volume. Launched a `t3.micro` instance with Amazon Linux and connected to it with SSH | 17/10/2026 | 17/10/2026 | [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) <br> [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
+| Day 2 | - **Plan:** EC2 in Practice <br> - **Main Task:** Security Groups, User Data & Pricing <br> - **Detailed Activities:** Added inbound rules to the security group and used user data to install a web server when the instance starts. Read about the pricing options: On-Demand, Savings Plans, Reserved Instances and Spot. Stopped the instance at the end of the day so it wouldn't keep charging | 18/10/2026 | 18/10/2026 | [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) <br> [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
+| Day 3 | - **Plan:** Lightsail <br> - **Main Task:** Introduction to Amazon Lightsail <br> - **Detailed Activities:** Created a Lightsail instance from a WordPress blueprint. Attached a static IP and looked at the firewall and snapshot options. Noticed how much faster it was to set up compared to EC2 | 19/10/2026 | 19/10/2026 | [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) <br> [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
+| Day 4 | - **Plan:** Lambda Basics <br> - **Main Task:** Introduction to AWS Lambda <br> - **Detailed Activities:** Wrote a small Python function in the Lambda console and tested it with a test event. Learned about triggers, the execution role, timeout, memory settings and where to find the logs in CloudWatch | 21/10/2026 | 21/10/2026 | [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) <br> [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
+| Day 5 | - **Plan:** Review <br> - **Main Task:** Comparing EC2, Lightsail and Lambda <br> - **Detailed Activities:** Connected the Lambda function to an API Gateway endpoint and called it from the browser. Made a short comparison of the three services and cleaned up all the resources I created during the week | 22/10/2026 | 22/10/2026 | [Amazon EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) <br> [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Amazon EC2 (IaaS):** Full OS control with AMIs, instance types, EBS storage, stateful Security Groups, and time-based pricing (On-Demand, Savings Plans, Spot)
+* **Amazon Lightsail:** Bundled virtual servers with preconfigured blueprints (e.g., WordPress), static IPs, and predictable fixed monthly pricing
+* **AWS Lambda (Serverless):** Event-driven functions (up to 15 minutes per run) billed per request and execution time, secured with least-privilege IAM Execution Roles
+* **Compute Selection:** Choosing EC2 for full control, Lightsail for simple fixed-cost websites, and Lambda for short event-driven workloads
 
-* Successfully created and configured an AWS Free Tier account.
+This week gave me a clear framework for choosing how to run code on AWS. **EC2** provides a full virtual machine where I control the OS and networking—but because it bills for every hour the server is running, unused instances must be stopped. **Lightsail** trades deep customization for speed and a fixed monthly bundle, while **Lambda** removes server management entirely so code only exists and costs money when triggered by an event such as an API Gateway request.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+Key takeaways:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Control vs. Convenience:** Use EC2 when deep OS/network customization is required, and Lightsail when launching small apps or websites quickly.
+- **Pay-for-Uptime vs. Pay-per-Execution:** EC2 charges while running even if idle, whereas Lambda bills strictly for request count and execution duration.
+- **Compute Security:** Restrict EC2 SSH access to specific IPs in Security Groups, and grant Lambda functions minimal IAM Execution Roles.

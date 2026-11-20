@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+baseURL = "https://trinhcongkhanh.github.io/tck-Internship-report/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -16,7 +16,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "thienlh@thienlu.com"
+  author = "Trinh Cong Khanh"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -30,7 +30,7 @@ languageName = "English"
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
 identifier = "AWS Study Group"
-url = "https://awsstudygroup.com"
+url = "https://aws.amazon.com/blogs/architecture/"
 weight = 20
 
 [[Languages.en.menu.shortcuts]]
@@ -47,7 +47,7 @@ languageName = "Tiếng Việt"
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
 identifier = "AWS Study Group"
-url = "http://awsstudygroup.com"
+url = "https://aws.amazon.com/blogs/architecture/"
 weight = 20
 
 [[Languages.vi.menu.shortcuts]]

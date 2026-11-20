@@ -5,53 +5,29 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Topic:** AWS Fundamentals & IAM
+* **Main Objective:** Understand basic AWS concepts and how access permissions are managed using IAM
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Day 1 | - **Plan:** AWS Basics <br> - **Main Task:** AWS Fundamentals <br> - **Detailed Activities:** Learned about the AWS Management Console, Regions, Availability Zones, and common AWS services | 15/09/2026 | 15/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [AWS Identity and Access Management (IAM) User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Day 2 | - **Plan:** User Management <br> - **Main Task:** IAM Users & Groups <br> - **Detailed Activities:** Learned how to create IAM Users, User Groups, and assign permissions | 17/09/2026 | 17/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [AWS Identity and Access Management (IAM) User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Day 3 | - **Plan:** Access Control <br> - **Main Task:** IAM Roles & Policies <br> - **Detailed Activities:** Learned about IAM Roles, Policies, and the Principle of Least Privilege | 20/09/2026 | 20/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [AWS Identity and Access Management (IAM) User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **AWS Global Infrastructure:** How AWS organizes services across Regions and Availability Zones for high availability and fault isolation
+* **IAM Identities & Policies:** Managing access through IAM Users, User Groups, temporary IAM Roles, and JSON permission policies
+* **Account Security Baseline:** Securing the Root Account, enforcing Multi-Factor Authentication (MFA), and applying Least Privilege
 
-* Successfully created and configured an AWS Free Tier account.
+The first week helped me understand how AWS global infrastructure is organized and why identity management is the first line of defense in the cloud. Rather than sharing root credentials or granting broad access, AWS IAM separates human users, groups, and temporary service roles so every identity receives only the exact permissions required for its task.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+Key takeaways:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Infrastructure Layout:** Regions and Availability Zones isolate failures and keep applications close to users.
+- **Role-Based Access:** Grouping users and using IAM Roles for services is much safer and easier to maintain than attaching policies to individual users.
+- **Root & Least Privilege:** The Root Account should be locked down with MFA for administrative emergencies only, while daily work runs on least-privilege IAM identities.

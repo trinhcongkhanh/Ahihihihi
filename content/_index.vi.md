@@ -6,16 +6,18 @@ chapter: false
 ---
 
 # Báo cáo thực tập
+
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Họ và tên:** Trịnh Công Khanh
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Số điện thoại:** 0929363222
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Email:** congkhanh272200505@gmail.com
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Trường:** Đại học FPT
+
+&emsp; **Ngành:** An Toàn Thông Tin
 
 &emsp; **Lớp:** AWS082025
 
@@ -23,18 +25,16 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ 14/09/2026 đến 14/12/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
-
-
+![Ảnh đại diện của bạn](../images/avatar.jpg)
 
 ### Nội dung báo cáo
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã đăng](3-BlogsPosted/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+1.  [Worklog](1-worklog/)
+2.  [Proposal](2-proposal/)
+3.  [Các bài blogs đã đăng](3-blogsposted/)
+4.  [Các events đã tham gia](4-eventparticipated/)
+5.  [Workshop](5-workshop/)
+6.  [Tự đánh giá](6-self-evaluation/)
+7.  [Chia sẻ, đóng góp ý kiến](7-feedback/)

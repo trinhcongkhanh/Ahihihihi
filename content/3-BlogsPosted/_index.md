@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+List of technical blog posts written during the internship program.
 
-This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
+###  [Blog 1 - Amazon Inspector](3.1-blog1/)
+Security is often thought of mainly as configuring IAM permissions and closing unnecessary ports. However, a server can be well-configured and still be compromised simply because the software inside remains unpatched. A single outdated library or an unpatched OS package is enough to give attackers a way in.
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+###  [Blog 2 - AWS FinOps Agent](3.2-blog2/)
+In many organizations, cloud cost management still operates on a periodic cycle. At the end of the month, the FinOps team opens a dashboard and discovers an abnormal cost spike in a service. They then have to filter data in Cost Explorer, correlate it with infrastructure change history, and ask individual teams who created or modified resources.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+###  [Blog 3 - AWS Backup Vault Lock](3.3-blog3/)
+The question is this: if an attacker already has admin rights, is there a backup that even the admin cannot delete? AWS Backup Vault Lock was designed to answer exactly that.

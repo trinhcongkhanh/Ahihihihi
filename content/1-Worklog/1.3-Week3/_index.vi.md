@@ -1,59 +1,34 @@
 ---
 title: "Worklog Tuần 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* **Chủ đề:** AWS Resource Access Manager (RAM)
+* **Mục tiêu chính:** Tìm hiểu cách chia sẻ tài nguyên AWS giữa các tài khoản mà không cần sao chép hoặc tạo thêm người dùng IAM
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Ngày 1 | - **Kế hoạch:** Tổng quan về RAM <br> - **Tác vụ chính:** Giới thiệu về AWS RAM <br> - **Hoạt động chi tiết:** Đọc về RAM là gì và tại sao nó được sử dụng trong môi trường đa tài khoản. Tìm hiểu 3 thành phần của một resource share: resources, principals và permissions | 28/09/2026 | 28/09/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS RAM (User Guide)](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Ngày 2 | - **Kế hoạch:** Chia sẻ Tài nguyên <br> - **Tác vụ chính:** Tạo một Resource Share <br> - **Hoạt động chi tiết:** Tạo một resource share trên console, thêm một VPC subnet và chia sẻ nó với một tài khoản khác. Kiểm tra lời mời trên tài khoản kia và chấp nhận nó | 30/09/2026 | 30/09/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS RAM (User Guide)](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Ngày 3 | - **Kế hoạch:** RAM với Organizations <br> - **Tác vụ chính:** Chia sẻ trong AWS Organizations <br> - **Hoạt động chi tiết:** Tìm hiểu cách bật chia sẻ với AWS Organizations để các tài khoản trong cùng một tổ chức không cần phải chấp nhận lời mời. So sánh việc chia sẻ cho một OU và một tài khoản đơn lẻ | 01/10/2026 | 01/10/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS RAM (User Guide)](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Ngày 4 | - **Kế hoạch:** Thực hành & Ôn tập <br> - **Tác vụ chính:** AWS CLI và cài đặt bảo mật <br> - **Hoạt động chi tiết:** Thực hành các lệnh `aws ram` cơ bản. Xem xét tùy chọn "Allow external principals" và cách giới hạn việc chia sẻ chỉ trong phạm vi tổ chức | 03/10/2026 | 03/10/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS RAM (User Guide)](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Resource Shares (AWS RAM):** Chia sẻ tài nguyên theo Region (VPC subnets, Transit Gateways, Route 53 rules) qua 3 thành phần: resources, principals và managed permissions
+* **Nội bộ Tổ chức vs. Bên ngoài:** Chia sẻ tự động không cần lời mời trong cùng AWS Organizations/OU so với cơ chế xác nhận lời mời khi chia sẻ cho tài khoản ngoài
+* **Quản trị CLI & Bảo mật biên:** Thao tác qua `aws ram` CLI và chặn chia sẻ ra ngoài tổ chức bằng điều kiện SCP `ram:RequestedAllowsExternalPrincipals`
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+AWS RAM giải quyết bài toán trùng lặp hạ tầng trong môi trường đa tài khoản bằng cách cho phép một tài khoản chủ chia sẻ tài nguyên trực tiếp cho các tài khoản khác. Khác với cross-account IAM role (người dùng phải chuyển đổi danh tính sang tài khoản khác), RAM giúp tài nguyên được chia sẻ (như VPC subnet) xuất hiện trực tiếp trong tài khoản nhận để khởi tạo EC2, trong khi quyền sửa/xóa hạ tầng gốc vẫn thuộc về tài khoản sở hữu.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Điểm cốt lõi rút ra:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- **Tái sử dụng hạ tầng:** Chia sẻ tài nguyên trực tiếp giữa các tài khoản mà không cần nhân bản hay tạo thêm IAM user.
+- **Giữ nguyên quyền sở hữu:** Tài khoản nhận chỉ được phép sử dụng tài nguyên theo quyền hạn được cấp, không thể tự ý chỉnh sửa hay xóa tài nguyên gốc.
+- **Kiểm soát phạm vi chia sẻ:** Tắt tùy chọn chia sẻ ra ngoài (external principals) kết hợp SCP giúp ngăn chặn rủi ro lộ tài nguyên ra ngoài tổ chức.

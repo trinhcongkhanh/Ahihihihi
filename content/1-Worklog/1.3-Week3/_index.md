@@ -1,57 +1,34 @@
 ---
 title: "Week 3 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Topic:** AWS Resource Access Manager (RAM)
+* **Main Objective:** Learn how to share AWS resources between accounts without copying them or creating extra IAM users
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Day 1 | - **Plan:** RAM Overview <br> - **Main Task:** Introduction to AWS RAM <br> - **Detailed Activities:** Read about what RAM is and why it is used in multi-account setups. Learned the three parts of a resource share: resources, principals and permissions | 28/09/2026 | 28/09/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Day 2 | - **Plan:** Sharing Resources <br> - **Main Task:** Create a Resource Share <br> - **Detailed Activities:** Created a resource share in the console, added a VPC subnet and shared it with another account. Checked the invitation on the other account and accepted it | 30/09/2026 | 30/09/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Day 3 | - **Plan:** RAM with Organizations <br> - **Main Task:** Sharing inside AWS Organizations <br> - **Detailed Activities:** Learned how to turn on sharing with AWS Organizations so accounts in the same organization don't need to accept invitations. Compared sharing to an OU vs. a single account | 01/10/2026 | 01/10/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
+| Day 4 | - **Plan:** Practice & Review <br> - **Main Task:** AWS CLI and security settings <br> - **Detailed Activities:** Practiced basic `aws ram` commands. Looked at the "Allow external principals" option and how to limit sharing to the organization only | 03/10/2026 | 03/10/2026 | [AWS Resource Access Manager (RAM) Console](https://console.aws.amazon.com/ram/home?region=us-east-1) <br> [AWS RAM User Guide](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html) |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Resource Shares (AWS RAM):** Sharing regional resources (VPC subnets, Transit Gateways, Route 53 rules) across accounts using resources, principals, and managed permissions
+* **Organizations vs. External Sharing:** Seamless invitation-free sharing inside AWS Organizations/OUs vs. explicit invitation acceptance for external accounts
+* **CLI & Boundary Security:** Managing shares via `aws ram` CLI and restricting external sharing with `ram:RequestedAllowsExternalPrincipals` SCP conditions
 
-* Successfully created and configured an AWS Free Tier account.
+AWS RAM solves resource duplication in multi-account setups by letting one owner account share infrastructure directly with other accounts. Unlike cross-account IAM roles—where a user switches identity to access another account—RAM makes the shared resource (such as a VPC subnet) appear natively inside the recipient account so teams can launch EC2 instances into it while the owner account retains full control over the subnet itself.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+Key takeaways:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Native Resource Sharing:** Shared resources can be used directly by recipient accounts without duplicating infrastructure or managing extra IAM users.
+- **Owner Control Preserved:** Recipient accounts can use a shared resource within managed permissions, but only the owner account can modify or delete it.
+- **Organization Guardrails:** Disabling external principals and enforcing SCP conditions prevents accidental resource sharing outside the organization.

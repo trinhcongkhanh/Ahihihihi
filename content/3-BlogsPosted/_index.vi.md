@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Danh sách các bài viết kỹ thuật được viết trong chương trình thực tập.
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+###  [Blog 1 - Amazon Inspector](3.1-blog1/)
+Bảo mật chủ yếu là chuyện phân quyền IAM và đóng bớt port. Server có thể cấu hình rất ổn mà vẫn bị tấn công, chỉ vì phần mềm bên trong chưa được vá. Một thư viện cũ, một gói hệ điều hành lâu chưa cập nhật là đủ để hacker có đường vào.
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+###  [Blog 2 - AWS FinOps Agent](3.2-blog2/)
+Trong nhiều tổ chức, việc quản lý chi phí cloud vẫn diễn ra theo chu kỳ. Cuối tháng, đội FinOps mở dashboard và phát hiện chi phí một service tăng bất thường. Sau đó họ phải lọc dữ liệu trong Cost Explorer, đối chiếu với lịch sử thay đổi hạ tầng, rồi đi hỏi từng team xem ai đã tạo hoặc thay đổi tài nguyên.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+###  [Blog 3 - AWS Backup Vault Lock](3.3-blog3/)
+Câu hỏi đặt ra: nếu kẻ tấn công đã có quyền admin, liệu có bản backup nào mà chính admin cũng không xoá được? AWS Backup Vault Lock được thiết kế để trả lời đúng câu hỏi này.

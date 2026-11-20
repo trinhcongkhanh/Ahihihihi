@@ -1,57 +1,35 @@
 ---
 title: "Week 4 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Topic:** Amazon Cognito & AWS Secrets Manager
+* **Main Objective:** Learn how to add user sign-up and sign-in to an application with Cognito, and how to store passwords and API keys safely with Secrets Manager instead of putting them in code
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Day 1 | - **Plan:** Cognito Basics <br> - **Main Task:** Cognito User Pools <br> - **Detailed Activities:** Read about what Cognito is and the difference between User Pools and Identity Pools. Created a User Pool, set a password policy and turned on email verification | 04/10/2026 | 04/10/2026 | [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) <br> [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) |
+| Day 2 | - **Plan:** Sign-up & Sign-in <br> - **Main Task:** App Client, Login Page & MFA <br> - **Detailed Activities:** Created an app client and tested sign-up and sign-in with the Cognito login page. Turned on MFA with an authenticator app. Looked at the ID token, access token and refresh token returned after login | 05/10/2026 | 05/10/2026 | [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) <br> [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) |
+| Day 3 | - **Plan:** Authorization <br> - **Main Task:** Identity Pools & API Gateway <br> - **Detailed Activities:** Learned how Identity Pools give signed-in users temporary AWS credentials through IAM roles. Added a Cognito authorizer to an API Gateway endpoint so only users with a valid token can call it | 06/10/2026 | 06/10/2026 | [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) <br> [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) |
+| Day 4 | - **Plan:** Storing Secrets <br> - **Main Task:** Secrets Manager Basics <br> - **Detailed Activities:** Created a secret to store database credentials and another one for an API key. Learned that secrets are encrypted with AWS KMS. Read the secret back with the AWS CLI | 08/10/2026 | 08/10/2026 | [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) <br> [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) |
+| Day 5 | - **Plan:** Using Secrets Safely <br> - **Main Task:** Rotation & Lambda Access <br> - **Detailed Activities:** Read about automatic secret rotation with a Lambda function. Gave a Lambda function permission to read only one secret and called it from code instead of hard-coding the value | 09/10/2026 | 09/10/2026 | [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) <br> [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Cognito User Pools & Tokens:** Managing sign-up/sign-in, MFA, and JWT tokens (ID, Access, and Refresh tokens) to authenticate application users
+* **Identity Pools & API Security:** Exchanging valid logins for temporary AWS credentials and securing API Gateway endpoints with Cognito Authorizers
+* **AWS Secrets Manager:** Encrypting database credentials and API keys with KMS, automating secret rotation, and restricting `GetSecretValue` to specific ARNs
 
-* Successfully created and configured an AWS Free Tier account.
+This week focused on two essentials of application security: verifying user identity with Amazon Cognito and eliminating hard-coded credentials with AWS Secrets Manager. Testing both services clarified that **User Pools** handle authentication ("who are you?" via JWT tokens), **Identity Pools** handle AWS authorization ("what can you access?" via temporary IAM credentials), and **Secrets Manager** lets backend functions fetch encrypted credentials at runtime instead of storing secrets in source code.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+Key takeaways:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Authentication vs. Authorization:** User Pools issue tokens for login and API Gateway checks, while Identity Pools map users to temporary IAM roles.
+- **Zero Hard-Coded Secrets:** Applications retrieve credentials dynamically from Secrets Manager so keys can be updated or rotated in one place without changing code.
+- **Scoped Secret Access:** Each Lambda function should only have `secretsmanager:GetSecretValue` permission for the single secret ARN it requires, with every read audited in CloudTrail.

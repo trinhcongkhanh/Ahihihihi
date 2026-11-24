@@ -1,0 +1,28 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,5.14,61.68,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+Cost Estimate,Asia Pacific (Singapore),,AWS Lambda,0,0,0.00,USD,,"Architecture (x86), Architecture (x86), Invoke Mode (Buffered), Amount of ephemeral storage allocated (512 MB), Number of requests (500000 per month)"
+Cost Estimate,Asia Pacific (Singapore),,DynamoDB on-demand capacity,0,0.29000000000000004,3.48,USD,,"Table class (Standard), Average item size (all attributes) (1 KB), Data storage size (1 GB)"
+Cost Estimate,Asia Pacific (Singapore),,DynamoDB Streams,0,0,0.00,USD,,Number of DynamoDB Streams GetRecord API requests (0 per month)
+Cost Estimate,Asia Pacific (Singapore),,DynamoDB Backup and restore,0,0.23,2.76,USD,,"On-demand backup data storage (0 GB), Table data restored (0 GB), Point-In-Time Recovery (PITR) data storage (1 GB)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon CloudFront,0,1.32,15.84,USD,,"Data transfer out to internet (10 GB per month), Data transfer out to origin (1 GB per month), Number of requests (HTTPS) (50000 per month)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon API Gateway,0,0.22999999999999998,2.76,USD,,"HTTP API requests units (millions), Average size of each request (34 KB), REST API request units (thousands), Cache memory size (GB) (None), WebSocket message units (thousands), Average message size (32 KB), Requests (50 per month), Messages (20 per month), Average connection duration (5 minutes), Average connection rate (35 per day)"
+Cost Estimate,Asia Pacific (Singapore),,S3 Standard,0,0.09,1.08,USD,,"S3 Standard storage (3 GB per month), PUT, COPY, POST, LIST requests to S3 Standard (1000), GET, SELECT, and all other requests from S3 Standard (15000)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon CloudWatch,0,1.3045,15.65,USD,,"Number of mobile OTEL events and spans or spans per visit (70), Mobile sampling rate (1), Standard Logs: Data Ingested (1 GB), Number of Dashboards (1), Number of Standard Resolution Alarm Metrics (6)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon Cognito,0,0,0.00,USD,,"Optimization Rate for Token Requests (0), Optimization Rate for App Clients (0), Advanced security features (Disabled), Number of monthly active users (MAU) (1000)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon EventBridge,0,0,0.00,USD,,"Size of the payload (1 KB), Number of custom events (3000 per month)"
+Cost Estimate,Asia Pacific (Singapore),,Amazon Simple Queue Service (SQS),0,0,0.00,USD,,"DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), Standard queue requests (0.015 million per month)"
+Cost Estimate,Asia Pacific (Singapore),,AWS Key Management Service,0,0.03,0.36,USD,,"Number of customer managed Customer Master Keys (CMK) (0), Number of symmetric requests (10000)"
+Cost Estimate,Asia Pacific (Singapore),,Standard topics,0,0,0.00,USD,,"DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), Requests (100 per month), EMAIL/EMAIL-JSON Notifications (100 per month)"
+Cost Estimate,Asia Pacific (Singapore),,AWS Secrets Manager,0,1.6500000000000001,19.80,USD,,"Number of secrets (4), Average duration of each secret (30 days), Number of API calls (10000 per month)"
+Cost Estimate,Asia Pacific (Singapore),,AWS CloudTrail,0,0,0.00,USD,,"Management events units (millions), Management event trails (1), Read management trails (1), Data events units (millions), S3 trails (1), Lambda trails (1), Network activity events units (millions), Network activity event trails (1), Insight events units (millions), Number of trails and/or event data stores where Insights events are enabled (1), Number of management events (0 per month)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

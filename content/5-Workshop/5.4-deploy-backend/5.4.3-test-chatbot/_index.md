@@ -71,3 +71,7 @@ Enter the following prompts into the chat window to verify retrieval from **S3 (
    * Ask the Chatbot about the updated product -> The bot immediately reflects the latest price and stock!
 
    ![CDC DynamoDB Streams Sync Logs](../../../images/5-Workshop/5.4-deploy-backend/CDC.png)
+
+---
+
+**Video demo of the whole system:** [Watch on YouTube](https://youtu.be/Pkxojg5wBYQ)

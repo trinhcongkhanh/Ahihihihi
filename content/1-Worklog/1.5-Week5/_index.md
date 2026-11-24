@@ -23,7 +23,7 @@ pre: " <b> 1.5. </b> "
 ### Week 5 Achievements:
 
 * **Amazon GuardDuty:** Agentless threat detection across CloudTrail, VPC Flow Logs, and DNS logs (plus optional S3, EKS, RDS, and Lambda protection)
-* **Alerting & Signal Tuning:** Routing high-severity findings to email via EventBridge + SNS and filtering false positives with suppression rules
+* **Alerting & Signal Tuning:** Routing high-severity findings to email via EventBridge + SNS and filtering noise with suppression rules / trusted IP lists
 * **Amazon Inspector:** Automated CVE and network exposure scanning across EC2, ECR images, and Lambda functions with risk-based prioritization
 * **GuardDuty vs. Inspector:** GuardDuty detects active attacks happening now; Inspector identifies software weaknesses before they are exploited
 
@@ -33,4 +33,4 @@ Key takeaways:
 
 - **Proactive vs. Reactive Detection:** Inspector finds software CVEs before an attack occurs, while GuardDuty spots live threats like SSH brute-force or port probing in real time.
 - **Zero-Agent Visibility:** GuardDuty analyzes CloudTrail, VPC Flow Logs, and DNS logs directly without requiring manual log setup.
-- **Automated Incident Response:** Pairing GuardDuty and Inspector with EventBridge and SNS ensures critical findings reach engineers immediately without manual console checks.
+- **Automated Alerting:** Pairing GuardDuty and Inspector with EventBridge and SNS ensures critical findings reach engineers immediately without manual console checks.

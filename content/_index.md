@@ -19,6 +19,8 @@ chapter: false
 
 &emsp; **Major:** Information Assurance
 
+&emsp; **Class:** Engineer Dragons
+
 &emsp; **Company Name:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
@@ -34,5 +36,5 @@ chapter: false
 3.  [Blogs Posted](3-blogsposted/)
 4.  [Events Participated](4-eventparticipated/)
 5.  [Workshop](5-workshop/)
-6.  [Self-Assessment](6-self-evaluation/)
+6.  [Self-Evaluation](6-self-evaluation/)
 7.  [Sharing and Feedback](7-feedback/)

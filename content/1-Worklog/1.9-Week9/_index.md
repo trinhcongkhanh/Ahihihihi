@@ -25,7 +25,7 @@ pre: " <b> 1.9. </b> "
 * **Amazon CloudWatch:** Collecting resource metrics and logs, building dashboards, and configuring threshold alarms to send alerts or trigger scaling
 * **AWS Auto Scaling:** Maintaining fleet health and capacity (min/desired/max) using Launch Templates and Target Tracking scaling policies
 * **AWS Config:** Tracking resource configuration history and auditing compliance continuously against managed rules (e.g., public S3 or open SSH)
-* **Integrated Operations:** Deploying CloudWatch + Auto Scaling via CloudFormation so monitoring, scaling, and compliance work together as one system
+* **Integrated Operations:** Deploying CloudWatch + Auto Scaling via CloudFormation so building, monitoring, and self-healing work together as one system
 
 This week shifted my focus from building infrastructure to keeping it healthy and compliant in production. Stress-testing CPU load showed me why **CloudWatch** and **Auto Scaling** belong together: CloudWatch detects the spike, and Auto Scaling automatically adds or replaces EC2 instances without human intervention. Meanwhile, **AWS Config** acts as a continuous compliance checklist—rather than blocking changes, it records configuration history and flags resources that violate security rules so they can be remediated.
 

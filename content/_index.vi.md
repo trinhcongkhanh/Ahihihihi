@@ -19,6 +19,8 @@ chapter: false
 
 &emsp; **Ngành:** An Toàn Thông Tin
 
+&emsp; **Lớp:** Engineer Dragons
+
 &emsp; **Tên công ty:** Công ty TNHH Amazon Web Services Việt Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey

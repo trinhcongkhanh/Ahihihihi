@@ -157,7 +157,7 @@ Các dịch vụ AWS tự động hấp thụ khối lượng công việc AI bi
 
 ### Ứng Dụng Vào Công Việc
 
-- Đánh giá các dự án thực tập và khóa luận của bản thân theo 4 trụ cột.
+- Đánh giá các dự án thực tập của bản thân theo 4 trụ cột.
 - Áp dụng prompt caching và nén context để kiểm soát chi phí và độ trễ khi dùng Amazon Bedrock.
 - Sử dụng mô hình Supervisor và Evaluator–Optimizer cho xử lý dữ liệu nhiều bước và kiểm thử tự động.
 - Sử dụng Lambda và Auto Scaling Groups để inference co giãn theo lưu lượng truy cập.

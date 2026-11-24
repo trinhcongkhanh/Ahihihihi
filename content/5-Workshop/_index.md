@@ -19,6 +19,12 @@ Throughout this lab, we will implement three core modern cloud pillars on AWS:
 + **Event-Driven Architecture (EDA):** Decouple asynchronous order fulfillment workflows using **Amazon EventBridge** and **Amazon SQS** (Inventory Worker for stock deduction, Shipping Worker integrated with GHN Sandbox, and Notification Worker sending emails via Gmail SMTP).
 + **Full-Duplex AI RAG Chatbot & CDC:** Build a real-time two-way chat channel using **API Gateway WebSocket** with a **Lambda Authorizer** verifying Cognito JWTs, in-memory vector search on **Amazon S3** powered by **Google Gemini 2.0 Flash**, and automated knowledge sync via **DynamoDB Streams**.
 
+#### Video Demo
+
+{{< youtube Pkxojg5wBYQ >}}
+
+**Video link:** [Watch on YouTube](https://youtu.be/Pkxojg5wBYQ)
+
 #### Contents
 
 1. [Introduction & Architecture Overview](5.1-workshop-overview/)

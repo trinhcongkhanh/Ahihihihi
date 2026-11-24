@@ -112,6 +112,6 @@ Attending **“The Thinking Behind Building The Bot”** gave me a practical vie
 - Clear, honest communication of how you solve problems matters in interviews.
 
 #### Some event photos
-![Check-in photo with visible face verifying event participation](../../images/event1.jpg)
+![Check-in photo with visible face verifying participation in The Thinking Behind Building The Bot](../../images/event1.jpg)
 
 > Overall, the talkshow changed how I see chatbot projects: as engineered systems that must be fast, accurate, safe and affordable.

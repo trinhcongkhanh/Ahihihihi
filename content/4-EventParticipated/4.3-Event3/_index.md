@@ -157,7 +157,7 @@ AWS services absorb fluctuating AI workloads automatically.
 
 ### Applying to Work
 
-- Evaluate my internship and thesis projects against the 4 pillars.
+- Evaluate my internship projects against the 4 pillars.
 - Apply prompt caching and context compression to control Amazon Bedrock cost and latency.
 - Use the Supervisor and Evaluator–Optimizer patterns for multi-step data processing and automated testing.
 - Use Lambda and Auto Scaling Groups for inference that scales with traffic.

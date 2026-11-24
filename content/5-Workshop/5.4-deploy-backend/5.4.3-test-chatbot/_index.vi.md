@@ -71,3 +71,7 @@ Nhập lần lượt các câu hỏi sau vào khung chat để kiểm tra khả 
    * Hỏi lại Chatbot về sản phẩm vừa cập nhật -> Bot lập tức trả lời đúng thông tin giá/tồn kho mới nhất!
 
    ![Log đồng bộ CDC từ DynamoDB Streams](../../../../images/5-Workshop/5.4-deploy-backend/CDC.png)
+
+---
+
+**Video demo toàn bộ hệ thống:** [Xem trên YouTube](https://youtu.be/Pkxojg5wBYQ)

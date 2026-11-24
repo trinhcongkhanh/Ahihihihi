@@ -19,6 +19,12 @@ Trong suốt bài lab, chúng ta sẽ thực hành 3 trụ cột kiến trúc hi
 + **Event-Driven Architecture (EDA):** Tách rời các tác vụ xử lý đơn hàng bằng **Amazon EventBridge** và **Amazon SQS** (Inventory Worker trừ kho, Shipping Worker tích hợp GHN Sandbox, Notification Worker gửi email qua Gmail SMTP).
 + **Full-Duplex AI RAG Chatbot & CDC:** Xây dựng kênh chat 2 chiều thời gian thực qua **API Gateway WebSocket** với **Lambda Authorizer** xác thực JWT Cognito, tra cứu tri thức vector trên **Amazon S3** kết hợp **Google Gemini 2.0 Flash**, và đồng bộ dữ liệu tự động qua **DynamoDB Streams**.
 
+#### Video demo
+
+{{< youtube Pkxojg5wBYQ >}}
+
+**Link video:** [Xem trên YouTube](https://youtu.be/Pkxojg5wBYQ)
+
 #### Nội dung
 
 1. [Giới thiệu & Tổng quan kiến trúc](5.1-workshop-overview/)

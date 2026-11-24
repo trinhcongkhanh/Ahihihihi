@@ -118,8 +118,8 @@ Các dịch vụ AWS tự động hấp thụ khối lượng công việc AI bi
 
 #### Tư Duy Production
 
-- Prototype trả lời câu hỏi “model có chạy được không?”, còn production trả lời “hệ thống có phục vụ được mọi người, mọi lúc, với chi phí bền vững không?”
-- Model chỉ là một nguyên liệu; data pipeline, bảo mật, mở rộng, độ tin cậy, giám sát và chi phí quan trọng không kém
+- Một prototype chạy được chỉ chứng minh ý tưởng là khả thi. Production phải chứng minh nó vẫn chạy tốt cho nhiều người, mỗi ngày, với chi phí công ty chấp nhận được
+- Model là phần dễ thấy nhất, nhưng dữ liệu, bảo mật, giám sát và kiểm soát chi phí mới quyết định hệ thống có trụ được hay không
 
 #### 4 Trụ Cột của AI Production
 
@@ -140,9 +140,9 @@ Các dịch vụ AWS tự động hấp thụ khối lượng công việc AI bi
 
 #### Agent Trong Doanh Nghiệp
 
-- Chuẩn hóa nền tảng trước (runtime, identity, guardrails, memory, observability) giúp nhiều agent dùng chung một nền an toàn
-- Thiết kế hybrid có thể kết nối hệ thống on-premises với agent trên cloud mà không mở truy cập từ bên ngoài vào
-- MCP cho phép agent dùng dữ liệu trực tiếp tại thời điểm suy luận
+- Xây nền tảng chung trước (runtime, identity, guardrails, memory, observability) giúp mỗi agent mới không phải giải lại cùng một bài toán
+- Trường hợp Mobileye cho thấy công ty không cần mở mạng nội bộ mà vẫn tận dụng được agent trên cloud
+- Với MCP, agent có thể tra cứu dữ liệu trực tiếp khi trả lời thay vì chỉ dựa vào những gì model đã biết
 
 #### Các Mô Hình Kiến Trúc Multi-Agent
 
@@ -168,23 +168,23 @@ Các dịch vụ AWS tự động hấp thụ khối lượng công việc AI bi
 
 ### Trải nghiệm trong event
 
-Tham gia workshop **Enterprise AI on AWS Cloud: From Prototype to Production** giúp tôi thấy AI đi từ một prototype trong lớp học đến một hệ thống mà người dùng thật phụ thuộc vào như thế nào.
+Điều tôi thích nhất ở **Enterprise AI on AWS Cloud: From Prototype to Production** là buổi workshop khiến tôi nghĩ về một câu hỏi đơn giản: vì sao nhiều bản demo tốt lại gặp khó khi có người dùng thật?
 
 #### Học hỏi từ các diễn giả
-- Phép ví von nhà hàng giúp các ý tưởng trừu tượng về cloud và AI trở nên dễ nhớ và dễ so sánh.
-- Nghe một AI engineer mới ra trường tại FPT Software chia sẻ khiến con đường từ việc học đến các dự án thực tế trở nên gần gũi hơn.
+- Phép so sánh với căn bếp rất dễ hình dung, và tôi có thể dùng lại để giải thích cloud và AI cho người ngoài ngành.
+- Nghe một AI engineer mới đi làm tại FPT Software chia sẻ khiến con đường này gần hơn với sinh viên như tôi.
 
 #### Case study thực tế
-- Cox Automotive và Mobileye cho thấy các công ty lớn dùng AgentCore, guardrails và MCP để xây dựng agent mà mọi người tin tưởng.
-- Trường hợp của Mobileye cho thấy tự động hóa công việc lặp lại giúp các kỹ sư giỏi tập trung vào những vấn đề khó hơn.
+- Cox Automotive cho tôi thấy niềm tin vào agent đến từ phân quyền, guardrails và log, không chỉ từ model.
+- Mobileye nhắc tôi rằng một project AI hữu ích có thể bắt đầu từ việc nhỏ và lặp lại, như trả lời ticket trạng thái.
 
 #### Kết nối và trao đổi
-- Tôi có cơ hội trao đổi ý tưởng với các thành viên FCAJ, sinh viên và kỹ sư làm việc với AI trên cloud.
+- Trao đổi ý tưởng với các thành viên FCAJ, sinh viên và kỹ sư giúp tôi so sánh cách mỗi người tiếp cận cùng một bài toán AI.
 
 #### Bài học rút ra
-- Enterprise AI được đánh giá bằng giá trị kinh doanh, độ tin cậy và sự tin tưởng, không chỉ độ chính xác.
-- Chuẩn hóa một nền tảng dùng chung giúp mở rộng nhiều trường hợp sử dụng AI một cách an toàn hơn.
-- Cloud giúp một nhóm nhỏ xử lý các nhu cầu hạ tầng mà trước đây cần cả một bộ máy lớn.
+- Tôi nên xác định hệ thống sẽ được giám sát và bảo vệ thế nào trước khi thêm tính năng mới.
+- Nhìn từ góc độ bảo mật, mỗi agent cần một danh tính riêng và chỉ những quyền nó thật sự dùng đến.
+- Bắt đầu nhỏ trên một nền tảng vững an toàn hơn là xây nhiều agent mà mỗi agent hoạt động một kiểu.
 
 #### Một số hình ảnh khi tham gia sự kiện
 
@@ -192,4 +192,4 @@ Tham gia workshop **Enterprise AI on AWS Cloud: From Prototype to Production** g
 
 *Hình ảnh check-in xác minh tham gia — Workshop From Prototype to Production*
 
-> Tổng thể, workshop giúp tôi hình dung rõ những gì cần có để biến một prototype AI thành một sản phẩm an toàn, đáng tin cậy và có thể mở rộng.
+> Sau workshop, tôi xem prototype chỉ là điểm bắt đầu: phần khó hơn là làm cho nó đủ an toàn, ổn định và hợp lý về chi phí để mọi người có thể dựa vào.

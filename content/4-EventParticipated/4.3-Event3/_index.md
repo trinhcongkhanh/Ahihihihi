@@ -118,8 +118,8 @@ AWS services absorb fluctuating AI workloads automatically.
 
 #### Production Mindset
 
-- A prototype answers “does the model work?”, while production answers “does the system work for everyone, all the time, at a sustainable cost?”
-- The model is one ingredient; the data pipeline, security, scaling, reliability, monitoring and cost matter just as much
+- A working prototype only proves that an idea is possible. Production has to prove that it keeps working for many people, every day, at a cost the company can accept
+- The model is the part people notice, but data, security, monitoring and cost control decide whether the system survives
 
 #### 4 Pillars of Production AI
 
@@ -140,9 +140,9 @@ AWS services absorb fluctuating AI workloads automatically.
 
 #### Enterprise Agents
 
-- Standardizing the foundation first (runtime, identity, guardrails, memory, observability) lets many agents share the same safe base
-- Hybrid designs can connect on-premises systems to cloud agents without opening inbound access
-- MCP lets agents use live data at inference time
+- Building the shared foundation first (runtime, identity, guardrails, memory, observability) keeps each new agent from solving the same problems again
+- The Mobileye case shows that a company does not have to open its internal network to benefit from cloud agents
+- With MCP, an agent can look up live data when it answers instead of relying only on what the model already knows
 
 #### Multi-Agent Architecture Patterns
 
@@ -168,23 +168,23 @@ AWS services absorb fluctuating AI workloads automatically.
 
 ### Event Experience
 
-Attending the **Enterprise AI on AWS Cloud: From Prototype to Production** workshop helped me see how AI moves from a classroom prototype to a system that real users depend on.
+What I liked most about **Enterprise AI on AWS Cloud: From Prototype to Production** was that it made me think about a simple question: why do so many good demos struggle once real people use them?
 
 #### Learning from speakers
-- The restaurant analogy made abstract cloud and AI ideas easy to remember and compare.
-- Hearing from a fresher AI engineer at FPT Software made the path from study to real projects feel reachable.
+- The kitchen comparison was easy to picture, and I can use it myself to explain cloud and AI to people outside the field.
+- Hearing an AI engineer who started recently at FPT Software speak made this path feel closer to students like me.
 
 #### Real case studies
-- Cox Automotive and Mobileye showed how large companies use AgentCore, guardrails and MCP to build agents that people can trust.
-- The Mobileye case showed that automating routine work frees skilled engineers for harder problems.
+- Cox Automotive showed me that trust in agents comes from permissions, guardrails and logs, not from the model alone.
+- Mobileye reminded me that a useful AI project can begin with a small, repetitive task such as answering status tickets.
 
 #### Networking and discussions
-- I had the chance to exchange ideas with FCAJ members, students and engineers who work with AI on the cloud.
+- Exchanging ideas with FCAJ members, students and engineers let me compare how different people approach the same AI problem.
 
 #### Lessons learned
-- Enterprise AI is judged by business value, reliability and trust, not accuracy alone.
-- Standardizing a shared foundation makes it easier to scale many AI use cases safely.
-- The cloud lets a small team handle infrastructure needs that once required a large operation.
+- I should define how a system will be monitored and protected before adding more features to it.
+- From a security point of view, every agent needs its own identity and only the permissions it really uses.
+- Starting small on a solid foundation is safer than building many agents that each work in a different way.
 
 #### Some event photos
 
@@ -192,4 +192,4 @@ Attending the **Enterprise AI on AWS Cloud: From Prototype to Production** works
 
 *Event Check-in Verification — From Prototype to Production Workshop*
 
-> Overall, the workshop gave me a clear picture of what it takes to turn an AI prototype into a secure, reliable and scalable product.
+> After the workshop, I see a prototype as the beginning of the work: the harder part is making it safe, stable and affordable enough for people to rely on.

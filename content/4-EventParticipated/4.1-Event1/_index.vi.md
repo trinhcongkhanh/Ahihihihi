@@ -65,19 +65,19 @@ Bot dùng trong doanh nghiệp khác rất nhiều so với việc gõ prompt tr
 
 #### Tư Duy Thiết Kế
 
-- Xem bot là một hệ thống cần được thiết kế kỹ lưỡng, không chỉ là một prompt bọc quanh mô hình
-- Tính đến độ trễ, chi phí, độ chính xác và khả năng xảy ra lỗi ngay từ đầu
+- Trước buổi này, tôi chủ yếu nghĩ đến việc chọn mô hình nào. Giờ tôi sẽ bắt đầu từ việc bot cần làm gì và có thể sai ở đâu
+- Độ trễ, chi phí và độ chính xác thường kéo ngược nhau, nên cần bàn trước khi xây dựng chứ không phải sau đó
 
 #### Kiến Trúc Kỹ Thuật
 
-- Kết hợp RAG, kiểm soát ngữ cảnh và guardrails để câu trả lời phù hợp và an toàn
-- Dùng các dịch vụ AWS được quản lý (Bedrock, Lambda, API Gateway, Secrets Manager) để triển khai đơn giản và tiết kiệm
-- Không để secret trong repository
+- RAG, kiểm soát ngữ cảnh và guardrails giải quyết ba vấn đề khác nhau, và một bot đáng tin cần cả ba
+- Các dịch vụ AWS được quản lý (Bedrock, Lambda, API Gateway, Secrets Manager) giúp dành nhiều thời gian hơn cho logic của bot
+- Một secret đã lọt vào repository thì nên xem như đã bị lộ
 
 #### Tư Duy Nghề Nghiệp
 
-- Thể hiện cách mình suy nghĩ, không chỉ những gì mình nhớ
-- Dùng cấu trúc STAR để trình bày rõ ràng các dự án thực hành trên AWS
+- Nói rõ điều mình chưa biết tốt hơn là đoán
+- Một project nhỏ được trình bày tốt theo STAR có thể thuyết phục hơn một danh sách dài các công cụ
 
 ### Ứng Dụng Vào Công Việc
 
@@ -90,28 +90,28 @@ Bot dùng trong doanh nghiệp khác rất nhiều so với việc gõ prompt tr
 
 ### Trải nghiệm trong event
 
-Tham gia **“The Thinking Behind Building The Bot”** giúp tôi hiểu thực tế điều gì nằm sau một bot hoạt động ổn định trong doanh nghiệp.
+Tôi đến với **“The Thinking Behind Building The Bot”** và nghĩ rằng sẽ chủ yếu nghe về mô hình và prompt. Điều đọng lại với tôi lại là có rất nhiều công việc cẩn thận diễn ra xung quanh mô hình.
 
 #### Học hỏi từ diễn giả
-- Bài nói cho thấy việc chọn mô hình chỉ là một phần, các quyết định về kiến trúc cũng quan trọng không kém.
-- Các ví dụ về quản lý ngữ cảnh và RAG giúp các ý tưởng trở nên cụ thể.
+- Diễn giả nhiều lần quay lại chuyện kiến trúc, nhờ đó tôi nhìn chatbot từ phía hệ thống thay vì chỉ từ phía prompt.
+- Phần về quản lý ngữ cảnh và RAG giải thích vì sao một bot có thể trả lời rất tự tin mà vẫn sai.
 
 #### Trải nghiệm kỹ thuật
-- Tôi thấy cách Bedrock, Lambda, API Gateway và Secrets Manager có thể kết hợp trong một bản triển khai bot.
+- Khi thấy Bedrock, Lambda, API Gateway và Secrets Manager nằm trong cùng một bức tranh, tôi kết nối được những dịch vụ mà trước đó mình học riêng lẻ.
 
 #### Mock interview và định hướng nghề nghiệp
-- Xem phỏng vấn thử trực tiếp giúp tôi biết nhà tuyển dụng tìm kiếm điều gì ở ứng viên fresher.
-- Phương pháp STAR cho tôi một cách rõ ràng để nói về các project của mình.
+- Xem phỏng vấn thử giúp tôi nhận ra cách ứng viên lập luận quan trọng hơn một câu trả lời hoàn hảo.
+- STAR cho tôi một trình tự đơn giản để nói về các bài lab và project của mình.
 
 #### Kết nối và trao đổi
-- Tôi có cơ hội gặp các kỹ sư từ CMC Global và mentor của AWS, hỏi về lộ trình nghề nghiệp trong điện toán đám mây và an toàn thông tin.
+- Trò chuyện với các kỹ sư từ CMC Global và mentor của AWS giúp tôi hình dung rõ hơn cloud và an toàn thông tin gặp nhau thế nào trong công việc thực tế.
 
 #### Bài học rút ra
-- Một bot tốt đến từ thiết kế có kỷ luật, không chỉ từ một mô hình mạnh.
-- Thói quen bảo mật, như quản lý secret đúng cách, nên được xây dựng ngay từ đầu.
-- Trình bày rõ ràng và trung thực cách mình giải quyết vấn đề rất quan trọng khi phỏng vấn.
+- Nên đánh giá một bot qua cách nó xử lý tình huống khó, không chỉ qua một bản demo đẹp.
+- Là sinh viên An toàn thông tin, tôi nên hỏi sớm bot chạm tới được dữ liệu nào và ai chạm tới được bot.
+- Tôi cần luyện cách giải thích công việc của mình thật đơn giản, vì làm kỹ thuật tốt vẫn phải để người khác hiểu được.
 
 #### Một số hình ảnh khi tham gia sự kiện
 ![Hình ảnh check-in rõ mặt chứng minh tham gia sự kiện The Thinking Behind Building The Bot](../../../images/event1.jpg)
 
-> Tổng thể, buổi talkshow thay đổi cách tôi nhìn các project chatbot: đó là những hệ thống cần được thiết kế để nhanh, chính xác, an toàn và tiết kiệm.
+> Tôi rời buổi talkshow với một câu hỏi đầu tiên khác trước: không phải “nên dùng mô hình nào?”, mà là “hệ thống này cần gì để được tin tưởng?”

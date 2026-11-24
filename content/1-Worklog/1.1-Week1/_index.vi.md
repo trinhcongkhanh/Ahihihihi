@@ -12,11 +12,11 @@ pre: " <b> 1.1. </b> "
 * **Mục tiêu chính:** Hiểu các khái niệm cơ bản về AWS và cách quyền truy cập được quản lý bằng IAM
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Ngày 1 | - **Kế hoạch:** AWS Basics <br> - **Tác vụ chính:** AWS Fundamentals <br> - **Hoạt động chi tiết:** Tìm hiểu về AWS Management Console, Regions, Availability Zones và các dịch vụ AWS phổ biến | 15/09/2026 | 15/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
-| Ngày 2 | - **Kế hoạch:** Quản lý người dùng <br> - **Tác vụ chính:** IAM Users & Groups <br> - **Hoạt động chi tiết:** Tìm hiểu cách tạo IAM Users, User Groups và phân quyền | 17/09/2026 | 17/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
-| Ngày 3 | - **Kế hoạch:** Quản lý truy cập <br> - **Tác vụ chính:** IAM Roles & Policies <br> - **Hoạt động chi tiết:** Tìm hiểu về IAM Roles, Policies và Nguyên tắc đặc quyền tối thiểu | 20/09/2026 | 20/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Ngày 1 | - **Kế hoạch:** AWS Basics <br> - **Tác vụ chính:** AWS Fundamentals <br> - **Hoạt động chi tiết:** Tìm hiểu về AWS Management Console, Regions, Availability Zones và các dịch vụ AWS phổ biến | 14/09/2026 | 14/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Ngày 2 | - **Kế hoạch:** Quản lý người dùng <br> - **Tác vụ chính:** IAM Users & Groups <br> - **Hoạt động chi tiết:** Tìm hiểu cách tạo IAM Users, User Groups và phân quyền | 15/09/2026 | 15/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Ngày 3 | - **Kế hoạch:** Quản lý truy cập <br> - **Tác vụ chính:** IAM Roles & Policies <br> - **Hoạt động chi tiết:** Tìm hiểu về IAM Roles, Policies và Nguyên tắc đặc quyền tối thiểu | 16/09/2026 | 16/09/2026 | [AWS IAM Management Console](https://console.aws.amazon.com/iam/home?region=us-east-1) <br> [Tài liệu hướng dẫn AWS IAM (User Guide)](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
 
 ### Kết quả đạt được tuần 1:
 

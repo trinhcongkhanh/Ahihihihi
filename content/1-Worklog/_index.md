@@ -30,4 +30,4 @@ This section contains my weekly reports documenting tasks completed, challenges 
 
 **Week 11:** [AWS Marketplace & AWS Billing Conductor](1.11-week11/)
 
-**Week 12:** [Architecture Review & Final Project](1.12-week12/)
+**Week 12:** [AWS KMS & AWS CloudHSM](1.12-week12/)

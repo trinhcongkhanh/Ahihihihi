@@ -19,20 +19,18 @@ chapter: false
 
 &emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** AWS082025
-
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
+&emsp; **Tên công ty:** Công ty TNHH Amazon Web Services Việt Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
 &emsp; **Thời gian thực tập:** Từ 14/09/2026 đến 14/12/2026
 
-![Ảnh đại diện của bạn](../images/avatar.jpg)
+![Trịnh Công Khanh](../images/avatar.jpg)
 
 ### Nội dung báo cáo
 
-1.  [Worklog](1-worklog/)
-2.  [Proposal](2-proposal/)
+1.  [Nhật ký công việc](1-worklog/)
+2.  [Bản đề xuất](2-proposal/)
 3.  [Các bài blogs đã đăng](3-blogsposted/)
 4.  [Các events đã tham gia](4-eventparticipated/)
 5.  [Workshop](5-workshop/)

@@ -30,4 +30,4 @@ Phần này chứa các báo cáo hàng tuần của tôi, ghi chép lại các 
 
 **Tuần 11:** [AWS Marketplace & AWS Billing Conductor](1.11-week11/)
 
-**Tuần 12:** [Đánh giá Kiến trúc & Dự án Cuối khóa](1.12-week12/)
+**Tuần 12:** [AWS KMS & AWS CloudHSM](1.12-week12/)

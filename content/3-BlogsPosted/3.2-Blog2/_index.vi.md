@@ -100,10 +100,9 @@ Tuy nhiên, hiệu quả thực tế phụ thuộc vào cách cấu hình quyề
 Tối ưu chi phí cloud không chỉ là cắt giảm tài nguyên. Đó còn là rút ngắn khoảng cách giữa thời điểm chi phí bất thường xuất hiện và thời điểm đội ngũ thực sự hiểu được nguyên nhân.
 
 **Nguồn tham khảo:**
-- [AWS What’s New – AWS FinOps Agent preview](https://aws.amazon.com/new/)
-- [AWS Blog – Announcing the public preview of AWS FinOps Agent](https://aws.amazon.com/blogs/aws-cloud-financial-management/)
-- [AWS FinOps Agent FAQs](https://aws.amazon.com/aws-cost-management/)
-- [AWS Blog – Automation and Trust in FinOps](https://aws.amazon.com/blogs/aws-cloud-financial-management/)
-- [InfoQ – AWS Previews FinOps Agent](https://www.infoq.com/)
+- [AWS What’s New – AWS FinOps Agent preview](https://aws.amazon.com/about-aws/whats-new/2026/06/aws-finops-agent-preview/)
+- [AWS Blog – Announcing the public preview of AWS FinOps Agent](https://aws.amazon.com/blogs/aws-cloud-financial-management/aws-finops-agent-is-now-public-preview/)
+- [AWS FinOps Agent FAQs](https://aws.amazon.com/finops-agent/faqs/)
+- [AWS Blog – Automation and Trust in FinOps](https://aws.amazon.com/blogs/aws-cloud-financial-management/automation-and-trust-in-finops/)
 
 *[#AWS](https://www.facebook.com/hashtag/AWS) [#AWSFinOpsAgent](https://www.facebook.com/hashtag/AWSFinOpsAgent) [#FinOps](https://www.facebook.com/hashtag/FinOps) [#AmazonBedrock](https://www.facebook.com/hashtag/AmazonBedrock) [#CloudFinancialManagement](https://www.facebook.com/hashtag/CloudFinancialManagement) [#AWSStudyGroup](https://www.facebook.com/hashtag/AWSStudyGroup)*

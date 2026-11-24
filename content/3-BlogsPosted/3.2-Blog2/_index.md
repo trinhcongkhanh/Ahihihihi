@@ -16,7 +16,7 @@ In many organizations, cloud cost management still operates on a periodic cycle.
 
 This process is time-consuming. More importantly, it is reactive: by the time the root cause is identified, the cost has already been accumulating for days. This raises a key question: does cost investigation really have to wait for monthly review meetings, or can it happen the moment an anomaly appears?
 
-AWS FinOps Agent entered public preview on June 9, 2026. Built on Amazon Bedrock, this frontier agent is designed to answer cost questions, automatically investigate cost anomalies, and execute recurring FinOps workflows. This approach shifts Cloud Financial Management from manual periodic reviews to continuous, event-driven operations.
+AWS FinOps Agent entered public preview on 09/06/2026. Built on Amazon Bedrock, this frontier agent is designed to answer cost questions, automatically investigate cost anomalies, and execute recurring FinOps workflows. This approach shifts Cloud Financial Management from manual periodic reviews to continuous, event-driven operations.
 
 ### 1. WHAT PROBLEM DOES AWS FINOPS AGENT SOLVE?
 
@@ -100,10 +100,9 @@ However, real-world effectiveness depends on proper IAM permission scoping, tagg
 Cloud cost optimization is not just about cutting resources—it is about closing the gap between the moment a cost anomaly occurs and the moment the team truly understands why.
 
 **References:**
-- [AWS What’s New – AWS FinOps Agent preview](https://aws.amazon.com/new/)
-- [AWS Blog – Announcing the public preview of AWS FinOps Agent](https://aws.amazon.com/blogs/aws-cloud-financial-management/)
-- [AWS FinOps Agent FAQs](https://aws.amazon.com/aws-cost-management/)
-- [AWS Blog – Automation and Trust in FinOps](https://aws.amazon.com/blogs/aws-cloud-financial-management/)
-- [InfoQ – AWS Previews FinOps Agent](https://www.infoq.com/)
+- [AWS What’s New – AWS FinOps Agent preview](https://aws.amazon.com/about-aws/whats-new/2026/06/aws-finops-agent-preview/)
+- [AWS Blog – Announcing the public preview of AWS FinOps Agent](https://aws.amazon.com/blogs/aws-cloud-financial-management/aws-finops-agent-is-now-public-preview/)
+- [AWS FinOps Agent FAQs](https://aws.amazon.com/finops-agent/faqs/)
+- [AWS Blog – Automation and Trust in FinOps](https://aws.amazon.com/blogs/aws-cloud-financial-management/automation-and-trust-in-finops/)
 
 *[#AWS](https://www.facebook.com/hashtag/AWS) [#AWSFinOpsAgent](https://www.facebook.com/hashtag/AWSFinOpsAgent) [#FinOps](https://www.facebook.com/hashtag/FinOps) [#AmazonBedrock](https://www.facebook.com/hashtag/AmazonBedrock) [#CloudFinancialManagement](https://www.facebook.com/hashtag/CloudFinancialManagement) [#AWSStudyGroup](https://www.facebook.com/hashtag/AWSStudyGroup)*

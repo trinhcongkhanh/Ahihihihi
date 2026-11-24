@@ -8,26 +8,38 @@ pre: " <b> 1.12. </b> "
 
 ### Mục tiêu tuần 12:
 
-* **Chủ đề:** AWS Well-Architected Framework và Dự án Thực tập cuối khóa
-* **Mục tiêu chính:** Vận hành xuất sắc, Bảo mật, Tin cậy, Hiệu năng, và Tối ưu chi phí (5 Trụ cột)
+* **Chủ đề:** AWS Key Management Service (KMS) & AWS CloudHSM
+* **Mục tiêu chính:** Hiểu cách AWS tạo và bảo vệ các khóa mã hóa, và khi nào nên dùng dịch vụ KMS được quản lý hoặc CloudHSM chuyên dụng
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | - **Kế hoạch:** Ngày 1 <br> - **Tác vụ chính:** Well-Architected Review <br> - **Hoạt động chi tiết:** Thực hiện quy trình WAR lên kiến trúc dự án cuối khóa <br> - **Kết quả:** Phát hiện 3 rủi ro bảo mật và vận hành (High-risk) | 24/11/2026 | 24/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
-| Thứ Ba | - **Kế hoạch:** Ngày 2 <br> - **Tác vụ chính:** Khắc phục Lỗi Kiến trúc <br> - **Hoạt động chi tiết:** Sửa các lỗi từ kết quả WAR (Bật mã hóa KMS, chuyển sang Multi-AZ) <br> - **Kết quả:** Kiến trúc được nâng cấp đạt chuẩn | 26/11/2026 | 26/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
-| Thứ Tư | - **Kế hoạch:** Ngày 3 <br> - **Tác vụ chính:** Tối ưu hóa Chi phí <br> - **Hoạt động chi tiết:** Giảm kích thước EC2 (Right-sizing) và cấu hình Savings Plans <br> - **Kết quả:** Giảm 25% chi phí dự kiến hàng tháng | 29/11/2026 | 29/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [Tài liệu hướng dẫn AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
+| Ngày 1 | - **Kế hoạch:** Cơ bản về KMS <br> - **Tác vụ chính:** Giới thiệu về AWS KMS <br> - **Hoạt động chi tiết:** Tìm hiểu KMS làm gì và ba loại khóa: AWS owned, AWS managed và customer managed. Tạo customer managed key đầu tiên của tôi | 23/11/2026 | 23/11/2026 | [Tài liệu hướng dẫn AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [Tài liệu hướng dẫn AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Ngày 2 | - **Kế hoạch:** Sử dụng khóa <br> - **Tác vụ chính:** Mã hóa tài nguyên AWS <br> - **Hoạt động chi tiết:** Bật mã hóa cho một S3 bucket và một EBS volume bằng KMS key của chính tôi. Tìm hiểu ý tưởng cơ bản của envelope encryption: data key khóa dữ liệu, còn KMS key khóa data key | 24/11/2026 | 24/11/2026 | [Tài liệu hướng dẫn AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [Tài liệu hướng dẫn AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Ngày 3 | - **Kế hoạch:** Kiểm soát truy cập <br> - **Tác vụ chính:** Key Policies & Rotation <br> - **Hoạt động chi tiết:** Chỉnh sửa key policy để chỉ một số users và roles nhất định được dùng khóa. Bật xoay vòng khóa tự động và kiểm tra CloudTrail để xem ai đã dùng khóa | 25/11/2026 | 25/11/2026 | [Tài liệu hướng dẫn AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [Tài liệu hướng dẫn AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Ngày 4 | - **Kế hoạch:** CloudHSM <br> - **Tác vụ chính:** Giới thiệu về AWS CloudHSM <br> - **Hoạt động chi tiết:** Tìm hiểu rằng CloudHSM cung cấp một hardware security module chuyên dụng mà chỉ tài khoản của tôi kiểm soát. Đọc về các cluster trải trên nhiều Availability Zones và các vai trò người dùng HSM | 26/11/2026 | 26/11/2026 | [Tài liệu hướng dẫn AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [Tài liệu hướng dẫn AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Ngày 5 | - **Kế hoạch:** Ôn tập <br> - **Tác vụ chính:** KMS vs. CloudHSM <br> - **Hoạt động chi tiết:** So sánh hai dịch vụ theo mức độ kiểm soát, chi phí và công sức. Tìm hiểu vì sao nên vô hiệu hóa khóa hoặc lên lịch xóa với thời gian chờ thay vì xóa ngay | 27/11/2026 | 27/11/2026 | [Tài liệu hướng dẫn AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [Tài liệu hướng dẫn AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
 
 ### Kết quả đạt được tuần 12:
 
-* **AWS Well-Architected Tool:** Đánh giá kiến trúc theo các tiêu chuẩn (Best Practices) của AWS
-* **AWS Cost Explorer:** Right-sizing, Tiết kiệm qua Savings Plans, Reserved Instances
+* **AWS KMS:** KMS là dịch vụ được quản lý để tạo và kiểm soát các khóa mã hóa. Khóa nằm bên trong KMS và được dùng để mã hóa dữ liệu trong các dịch vụ như S3, EBS, RDS và Secrets Manager
+* **Các loại khóa:** AWS owned key và AWS managed key do AWS quản lý. Customer managed key cho tôi quyền kiểm soát policy, việc xoay vòng và việc xóa khóa
+* **Envelope Encryption:** Thay vì gửi dữ liệu lớn đến KMS, một data key nhỏ mã hóa dữ liệu, và KMS key mã hóa data key đó
+* **Bảo mật khóa:** Dùng key policy với đặc quyền tối thiểu, bật xoay vòng tự động, kiểm tra việc sử dụng khóa trong CloudTrail, và dùng thời gian chờ trước khi xóa khóa
+* **AWS CloudHSM:** CloudHSM là thiết bị phần cứng chuyên dụng, single-tenant trong VPC của tôi. Tôi tự quản lý khóa và người dùng, và AWS không thể thấy các khóa
+* **KMS vs. CloudHSM:** KMS dễ dùng và rẻ hơn trong hầu hết trường hợp. CloudHSM dành cho các quy định tuân thủ nghiêm ngặt hoặc khi công ty cần toàn quyền kiểm soát phần cứng
 
-Trong Tuần 12, tôi đã tổng hợp toàn bộ kiến thức tích lũy trong kỳ thực tập bằng cách thực hiện đánh giá AWS Well-Architected Review và tối ưu hóa dự án đám mây cuối khóa.
+Trong tuần cuối, tôi học về thứ nằm bên dưới gần như mọi thứ tôi đã học trước đó: khóa mã hóa. S3, EBS, RDS và Secrets Manager đều phụ thuộc vào chúng, nhưng đến giờ tôi chưa từng xem các khóa thực sự đến từ đâu.
+
+KMS hóa ra đơn giản hơn tôi nghĩ. Tôi tạo một khóa, quyết định ai được dùng nó, và AWS lo việc giữ nó an toàn. Envelope encryption là phần tôi mất nhiều thời gian nhất. Hình dung nó như "một chiếc chìa khóa nằm trong chiếc hộp bị khóa" giúp tôi hiểu ra: data key mở dữ liệu, còn KMS key mở chiếc hộp đựng data key.
+
+CloudHSM cho cảm giác ngược lại. Nó cho nhiều quyền kiểm soát hơn, nhưng tôi cũng phải chịu nhiều trách nhiệm hơn. Nếu tôi làm mất thông tin đăng nhập HSM, không ai có thể khôi phục khóa cho tôi, kể cả AWS. Điều đó giúp tôi thấy rõ vì sao hầu hết dự án dùng KMS, và vì sao CloudHSM chủ yếu dành cho các công ty có quy định bảo mật nghiêm ngặt.
 
 Các điểm chính đã học:
 
-- Đánh giá kiến trúc đám mây dựa trên các trụ cột của AWS Well-Architected Framework
-- Khắc phục các rủi ro bảo mật và độ tin cậy cao bằng mã hóa KMS và mô hình Multi-AZ
-- Phân tích chi phí và tối ưu hóa ngân sách đám mây qua EC2 right-sizing và AWS Savings Plans
-- Hoàn thiện và bàn giao kiến trúc đám mây sẵn sàng cho môi trường thực tế (production-ready)
+- KMS là gì và ba loại khóa
+- Mã hóa S3 và EBS bằng customer managed key
+- Ý tưởng cơ bản của envelope encryption
+- Bảo vệ khóa bằng key policy, xoay vòng khóa và log CloudTrail
+- CloudHSM là gì và khác KMS như thế nào
+- Lựa chọn giữa KMS và CloudHSM dựa trên mức độ kiểm soát, chi phí và tuân thủ

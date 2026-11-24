@@ -6,35 +6,35 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Throughout the **AWS First Cloud Journey (Workforce Bootcamp)** internship, participating in on-site community events, technical talkshows, and engineering buildathons played a transformative role. These engagements provided unique opportunities to expand technical horizons, interface directly with Principal Engineers and Solutions Architects from **Amazon Web Services** and enterprise partners like **CMC Global**, and test classroom concepts against high-stakes real-world challenges.
+Throughout the **AWS First Cloud Journey (Workforce Bootcamp)** internship, taking part in on-site events, seminars, and technical days played a very important role. They were opportunities to broaden my view of technology, connect directly with leading experts from **Amazon Web Services** and major partners such as **CMC Global**, and test what I had learned against real-world scenarios.
 
 ### [Event 1](4.1-event1/)
 &emsp;**Event Name:** The Thinking Behind Building The Bot
 
-&emsp;**Date & Time:** 26/09/2026
+&emsp;**Date & Time:** 26/09/2026, 09:00 – 12:00
 
-&emsp;**Location:** Bitexco Tower - Ho Chi Minh City
+&emsp;**Location:** Bitexco Financial Tower, Ho Chi Minh City
 
-&emsp;**Role:** Student
+&emsp;**Role:** Attendee
 
 ---
 
 ### [Event 2](4.2-event2/)
 &emsp;**Event Name:** Navigating the Future of Cloud & AI in Vietnam
 
-&emsp;**Date & Time:** 02/10/2026
+&emsp;**Date & Time:** 02/10/2026, 09:00 – 12:00
 
-&emsp;**Location:** Bitexco Tower - Ho Chi Minh City
+&emsp;**Location:** Bitexco Financial Tower, Ho Chi Minh City
 
-&emsp;**Role:** Student
+&emsp;**Role:** Attendee
 
 ---
 
 ### [Event 3](4.3-event3/)
-&emsp;**Event Name:** AWS GenAI Buildathon & Cloud Immersion Day
+&emsp;**Event Name:** Enterprise AI on AWS Cloud: From Prototype to Production
 
-&emsp;**Date & Time:** Full Day (08:30 - 17:30)
+&emsp;**Date & Time:** 14/11/2026, 09:00 – 12:00
 
-&emsp;**Location:** AWS Training Lab
+&emsp;**Location:** Bitexco Financial Tower, Ho Chi Minh City
 
-&emsp;**Role:** Security & Cloud Lead
+&emsp;**Role:** Attendee

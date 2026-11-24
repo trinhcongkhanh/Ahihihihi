@@ -8,26 +8,38 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-* **Topic:** AWS Well-Architected Framework and Final Internship Project
-* **Focus:** Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization
+* **Topic:** AWS Key Management Service (KMS) & AWS CloudHSM
+* **Main Objective:** Understand how AWS creates and protects encryption keys, and when to use the managed KMS service or a dedicated CloudHSM
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Monday | - **Date:** Day 1 <br> - **Main Task:** Well-Architected Review <br> - **Activities:** Conducted a WAR on our final project architecture <br> - **Result:** Identified 3 high-risk issues | 24/11/2026 | 24/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [AWS Well-Architected Framework Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
-| Tuesday | - **Date:** Day 2 <br> - **Main Task:** Security & Reliability Fixes <br> - **Activities:** Remediated WAR findings (Enabled KMS, Multi-AZ) <br> - **Result:** Architecture upgraded | 26/11/2026 | 26/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [AWS Well-Architected Framework Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
-| Wednesday | - **Date:** Day 3 <br> - **Main Task:** Cost Optimization <br> - **Activities:** Right-sized EC2 instances and purchased Savings Plans <br> - **Result:** Reduced projected monthly cost by 25% | 29/11/2026 | 29/11/2026 | [AWS Well-Architected Tool Console](https://console.aws.amazon.com/wellarchitected/home?region=us-east-1) <br> [AWS Billing and Cost Management Console](https://console.aws.amazon.com/costmanagement/home) <br> [AWS Well-Architected Framework Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) <br> [AWS Architecture Center](https://aws.amazon.com/architecture/) |
+| Day 1 | - **Plan:** KMS Basics <br> - **Main Task:** Introduction to AWS KMS <br> - **Detailed Activities:** Learned what KMS does and the three kinds of keys: AWS owned, AWS managed and customer managed. Created my first customer managed key | 23/11/2026 | 23/11/2026 | [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [AWS CloudHSM Documentation](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Day 2 | - **Plan:** Using Keys <br> - **Main Task:** Encrypting AWS Resources <br> - **Detailed Activities:** Turned on encryption for an S3 bucket and an EBS volume using my own KMS key. Learned the basic idea of envelope encryption: a data key locks the data, and the KMS key locks the data key | 24/11/2026 | 24/11/2026 | [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [AWS CloudHSM Documentation](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Day 3 | - **Plan:** Access Control <br> - **Main Task:** Key Policies & Rotation <br> - **Detailed Activities:** Edited the key policy so only certain users and roles can use the key. Turned on automatic key rotation and checked CloudTrail to see who used the key | 25/11/2026 | 25/11/2026 | [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [AWS CloudHSM Documentation](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Day 4 | - **Plan:** CloudHSM <br> - **Main Task:** Introduction to AWS CloudHSM <br> - **Detailed Activities:** Learned that CloudHSM gives a dedicated hardware security module that only my account controls. Read about clusters across Availability Zones and the HSM user roles | 26/11/2026 | 26/11/2026 | [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [AWS CloudHSM Documentation](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
+| Day 5 | - **Plan:** Review <br> - **Main Task:** KMS vs. CloudHSM <br> - **Detailed Activities:** Compared the two services by control, cost and effort. Learned why it is better to disable a key or schedule deletion with a waiting period than to delete it right away | 27/11/2026 | 27/11/2026 | [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) <br> [AWS CloudHSM Documentation](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) |
 
 ### Week 12 Achievements:
 
-* **AWS Well-Architected Tool:** Reviewing architectures against AWS best practices
-* **AWS Cost Explorer:** Right-sizing, Savings Plans, Reserved Instances
+* **AWS KMS:** KMS is a managed service for creating and controlling encryption keys. The keys stay inside KMS and are used to encrypt data in services like S3, EBS, RDS and Secrets Manager
+* **Key Types:** AWS owned and AWS managed keys are handled by AWS. Customer managed keys give me control over the policy, rotation and deletion
+* **Envelope Encryption:** Instead of sending large data to KMS, a small data key encrypts the data, and the KMS key encrypts that data key
+* **Key Security:** Use key policies with least privilege, turn on automatic rotation, check key usage in CloudTrail, and use the waiting period before deleting a key
+* **AWS CloudHSM:** CloudHSM is a dedicated, single-tenant hardware device in my VPC. I manage the keys and users myself, and AWS cannot see the keys
+* **KMS vs. CloudHSM:** KMS is easier and cheaper for most cases. CloudHSM is for strict compliance rules or when a company needs full control of the hardware
 
-During Week 12, I synthesized all knowledge gained throughout the internship by conducting an AWS Well-Architected Review and optimizing our final cloud project.
+For the last week, I studied something that sits under almost everything I learned before: encryption keys. S3, EBS, RDS and Secrets Manager all depend on them, but until now I had never looked at where the keys actually come from.
+
+KMS turned out to be simpler than I expected. I create a key, decide who can use it, and AWS takes care of keeping it safe. Envelope encryption was the part that took me longest. Thinking of it as "a key inside a locked box" made it click: the data key opens the data, and the KMS key opens the box holding the data key.
+
+CloudHSM felt like the opposite. It gives more control, but I also get more responsibility. If I lose the HSM credentials, nobody can recover the keys for me, not even AWS. That made it clear to me why most projects use KMS, and why CloudHSM is mainly for companies with strict security rules.
 
 Key points learned:
 
-- Evaluating cloud architectures across the pillars of the AWS Well-Architected Framework
-- Remediating high-risk security and reliability issues using KMS encryption and Multi-AZ patterns
-- Analyzing billing trends and optimizing cloud spend through EC2 right-sizing and AWS Savings Plans
-- Delivering a production-ready, well-documented cloud architecture
+- What KMS is and the three types of keys
+- Encrypting S3 and EBS with a customer managed key
+- The basic idea of envelope encryption
+- Protecting keys with key policies, rotation and CloudTrail logs
+- What CloudHSM is and how it is different from KMS
+- Choosing between KMS and CloudHSM based on control, cost and compliance
